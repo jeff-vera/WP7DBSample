@@ -20,5 +20,17 @@ namespace DBSample
 		{
 			InitializeComponent();
 		}
+
+		protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+		{
+			base.OnNavigatedTo(e);
+
+			using (
+				var db = new Model.UserDataContext(Model.UserDataContext.connString))
+			{
+				var users = from Model.User u in db.Users select u;
+				userList.ItemsSource = users;
+			}			
+		}
 	}
 }
