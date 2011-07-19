@@ -28,7 +28,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox Height="414" HorizontalAlignment="Left" Margin="12,79,0,0" Name="userList" VerticalAlignment="Top" Width="423" />
+            <ListBox Height="414" HorizontalAlignment="Left" Margin="12,79,0,0" Name="userList" VerticalAlignment="Top" Width="423" Tap="userList_Tap" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,21,0,0" Name="textBlock1" Text="Select user to delete." VerticalAlignment="Top" Width="438" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,523,0,0" Name="status" Text="" VerticalAlignment="Top" Width="423" />
         </Grid>

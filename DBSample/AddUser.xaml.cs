@@ -34,6 +34,9 @@ namespace DBSample
 				db.Users.InsertOnSubmit(u);
 				db.SubmitChanges();
 				status.Text = string.Concat("User ", u.FullName, " added");
+
+				firstName.Text = "";
+				lastName.Text = "";
 			}
 		}
 	}
