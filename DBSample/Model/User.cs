@@ -34,5 +34,13 @@ namespace DBSample.Model
 
 		[Column]
 		public DateTime CreatedOn { get; set; }
+
+		public string FullName
+		{
+			get
+			{
+				return string.Concat(FirstName, " ", LastName);
+			}
+		}
 	}
 }

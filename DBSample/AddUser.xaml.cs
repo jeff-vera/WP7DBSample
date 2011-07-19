@@ -19,5 +19,22 @@ namespace DBSample
 		{
 			InitializeComponent();
 		}
+
+		private void addUser_Click(object sender, RoutedEventArgs e)
+		{
+			Model.User u = new Model.User
+			{
+				FirstName = firstName.Text,
+				LastName = lastName.Text,
+				CreatedOn = DateTime.Now
+			};
+
+			using (var db = new Model.UserDataContext(Model.UserDataContext.connString))
+			{
+				db.Users.InsertOnSubmit(u);
+				db.SubmitChanges();
+				status.Text = string.Concat("User ", u.FullName, " added");
+			}
+		}
 	}
 }

@@ -27,7 +27,14 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,106,0,0" Name="textBlock1" Text="Last Name:" VerticalAlignment="Top" Width="115" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,35,0,0" Name="textBlock2" Text="First Name:" VerticalAlignment="Top" Width="146" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="119,6,0,0" Name="firstName" Text="" VerticalAlignment="Top" Width="310" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="119,84,0,0" Name="lastName" Text="" VerticalAlignment="Top" Width="310" />
+            <Button Content="Add User" Height="72" HorizontalAlignment="Left" Margin="6,179,0,0" Name="addUser" VerticalAlignment="Top" Width="423" Click="addUser_Click" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,287,0,0" Name="status" Text="" VerticalAlignment="Top" Width="417" />
+        </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

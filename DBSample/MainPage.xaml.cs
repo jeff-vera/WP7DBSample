@@ -30,6 +30,7 @@ namespace DBSample
 			{
 				var users = from Model.User u in db.Users select u;
 				userList.ItemsSource = users;
+				userList.DisplayMemberPath = "FullName";
 			}			
 		}
 
