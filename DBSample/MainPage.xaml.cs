@@ -32,5 +32,15 @@ namespace DBSample
 				userList.ItemsSource = users;
 			}			
 		}
+
+		private void AddUser_Click(object sender, EventArgs e)
+		{
+			NavigationService.Navigate(new Uri("/AddUser.xaml", UriKind.Relative));
+		}
+
+		private void DeleteUser_Click(object sender, EventArgs e)
+		{
+			NavigationService.Navigate(new Uri("/DeleteUser.xaml", UriKind.Relative));
+		}
 	}
 }
